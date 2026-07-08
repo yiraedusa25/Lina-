@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación XV</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+background:#000;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+audio{
+display:none;
+}
+
+#musica{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#a855f7;
+color:white;
+font-size:30px;
+border:none;
+cursor:pointer;
+box-shadow:0 0 10px rgba(0,0,0,.4);
+}
+</style>
+
+</head>
+
+<body>
+
+<button id="musica">🎵</button>
+
+<audio id="audio" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<img src="1.png">
+<img src="2.png">
+<img src="3.png">
+<img src="4.png">
+<img src="5.png">
+<img src="6.png">
+<img src="7.png">
+<img src="8.png">
+
+<script>
+
+let audio=document.getElementById("audio");
+
+document.getElementById("musica").onclick=function(){
+
+if(audio.paused){
+audio.play();
+}else{
+audio.pause();
+}
+
+}
+
+</script>
+
+</body>
+</html>
